@@ -1,0 +1,32 @@
+% Commands to simplify the references to certain elements
+
+\newcommand\specialref[2]{#1~\ref{#2}}
+
+% Algorithms
+\newcommand\Refalg[1]{\specialref{Algorithm, #1}}
+\newcommand\refalg\Refalg
+
+% Definition & Lemma & Theorem
+\newcommand\Refdef[1]{\specialref{Definition, #1}}
+\newcommand\refdef\Refdef
+
+\newcommand\Reflemma[1]{\specialref{Lemma, #1}}
+\newcommand\reflemma\Reflemma
+
+% Figures & Tables
+\newcommand\Reffig[1]{\specialref{Figure, #1}}
+\newcommand\reffig\Reffig
+
+\ifdef\subref*
+	\newcommand\Refsubfig[1]{\specialref{Figure, \subref*{#1}}}
+	\newcommand\refsubfig\Refsubfig
+\fi
+
+
+\newcommand\Reftbl[1]{\specialref{Table, #1}}
+\newcommand\reftbl\Reftbl
+
+% Sections
+\newcommand\Refsec[1]{\specialref{Section, #1}}
+\newcommand\refsec\Refsec
+
